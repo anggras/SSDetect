@@ -9,9 +9,14 @@ PEXECFLOW=/tmp/version.plist
 UPDATER=~/Library/Application\ Support/agent_updater/agent.sh
 PAYLOAD=/tmp/agent
 LAAGENT=~/Library/Launchagents/agent.plist
-LAAGENTPROP=~/Library/Launchagents/init_agent.plist 
+LAAGENTPROP=~/Library/Launchagents/init_agent.plist
+UPDATER=~/Library/Application\ Support/verx_updater/verx.sh
+V2PAYLOAD=/tmp/verx
+V2LAAGENT=~/Library/Launchagents/verx.plist
+V2LAAGENTPROP=~/Library/Launchagents/init_verx.plist
 
-if [[ -f "$INSU" ]] || [ -f "$CALLBACK" ] || [ -f "$EXECFLOW" ] || [ -f "$PEXECFLOW" ] ; then
+
+if [ -f "$INSU" ] || [ -f "$CALLBACK" ] || [ -f "$EXECFLOW" ] || [ -f "$PEXECFLOW" ] || [ -f "$UPDATER" ] || [ -f "$V2PAYLOAD" ] || [ -f "$V2LAAGENT" ] || [ -f "$V2LAAGENTPROP" ] ; then
     COMP=1
 fi
 
